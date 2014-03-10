@@ -1,0 +1,115 @@
+MODULE main
+VAR
+a0: {a, c, t, g};
+a1: {a, c, t, g};
+a2: {a, c, t, g};
+a3: {a, c, t, g};
+a4: {a, c, t, g};
+a5: {a, c, t, g};
+a6: {a, c, t, g};
+a7: {a, c, t, g};
+a8: {a, c, t, g};
+a9: {a, c, t, g};
+VAR pos: 0..110;
+INIT (
+(a0=a & a1=a & a2=a & a3=g & a4=t & a5=g & a6=t & a7=g & a8=c & a9=t & pos=0)|
+(a0=a & a1=a & a2=g & a3=t & a4=g & a5=t & a6=g & a7=c & a8=t & a9=a & pos=1)|
+(a0=a & a1=g & a2=t & a3=g & a4=t & a5=g & a6=c & a7=t & a8=a & a9=a & pos=2)|
+(a0=g & a1=t & a2=g & a3=t & a4=g & a5=c & a6=t & a7=a & a8=a & a9=t & pos=3)|
+(a0=t & a1=g & a2=t & a3=g & a4=c & a5=t & a6=a & a7=a & a8=t & a9=c & pos=4)|
+(a0=g & a1=t & a2=g & a3=c & a4=t & a5=a & a6=a & a7=t & a8=c & a9=t & pos=5)|
+(a0=t & a1=g & a2=c & a3=t & a4=a & a5=a & a6=t & a7=c & a8=t & a9=g & pos=6)|
+(a0=g & a1=c & a2=t & a3=a & a4=a & a5=t & a6=c & a7=t & a8=g & a9=g & pos=7)|
+(a0=c & a1=t & a2=a & a3=a & a4=t & a5=c & a6=t & a7=g & a8=g & a9=a & pos=8)|
+(a0=t & a1=a & a2=a & a3=t & a4=c & a5=t & a6=g & a7=g & a8=a & a9=t & pos=9)|
+(a0=a & a1=a & a2=t & a3=c & a4=t & a5=g & a6=g & a7=a & a8=t & a9=g & pos=10)|
+(a0=a & a1=t & a2=c & a3=t & a4=g & a5=g & a6=a & a7=t & a8=g & a9=a & pos=11)|
+(a0=t & a1=c & a2=t & a3=g & a4=g & a5=a & a6=t & a7=g & a8=a & a9=t & pos=12)|
+(a0=c & a1=t & a2=g & a3=g & a4=a & a5=t & a6=g & a7=a & a8=t & a9=g & pos=13)|
+(a0=t & a1=g & a2=g & a3=a & a4=t & a5=g & a6=a & a7=t & a8=g & a9=a & pos=14)|
+(a0=g & a1=g & a2=a & a3=t & a4=g & a5=a & a6=t & a7=g & a8=a & a9=c & pos=15)|
+(a0=g & a1=a & a2=t & a3=g & a4=a & a5=t & a6=g & a7=a & a8=c & a9=t & pos=16)|
+(a0=a & a1=t & a2=g & a3=a & a4=t & a5=g & a6=a & a7=c & a8=t & a9=a & pos=17)|
+(a0=t & a1=g & a2=a & a3=t & a4=g & a5=a & a6=c & a7=t & a8=a & a9=a & pos=18)|
+(a0=g & a1=a & a2=t & a3=g & a4=a & a5=c & a6=t & a7=a & a8=a & a9=g & pos=19)|
+(a0=a & a1=t & a2=g & a3=a & a4=c & a5=t & a6=a & a7=a & a8=g & a9=g & pos=20)|
+(a0=t & a1=g & a2=a & a3=c & a4=t & a5=a & a6=a & a7=g & a8=g & a9=t & pos=21)|
+(a0=g & a1=a & a2=c & a3=t & a4=a & a5=a & a6=g & a7=g & a8=t & a9=c & pos=22)|
+(a0=a & a1=c & a2=t & a3=a & a4=a & a5=g & a6=g & a7=t & a8=c & a9=g & pos=23)|
+(a0=c & a1=t & a2=a & a3=a & a4=g & a5=g & a6=t & a7=c & a8=g & a9=a & pos=24)|
+(a0=t & a1=a & a2=a & a3=g & a4=g & a5=t & a6=c & a7=g & a8=a & a9=t & pos=25)|
+(a0=a & a1=a & a2=g & a3=g & a4=t & a5=c & a6=g & a7=a & a8=t & a9=a & pos=26)|
+(a0=a & a1=g & a2=g & a3=t & a4=c & a5=g & a6=a & a7=t & a8=a & a9=g & pos=27)|
+(a0=g & a1=g & a2=t & a3=c & a4=g & a5=a & a6=t & a7=a & a8=g & a9=t & pos=28)|
+(a0=g & a1=t & a2=c & a3=g & a4=a & a5=t & a6=a & a7=g & a8=t & a9=c & pos=29)|
+(a0=t & a1=c & a2=g & a3=a & a4=t & a5=a & a6=g & a7=t & a8=c & a9=t & pos=30)|
+(a0=c & a1=g & a2=a & a3=t & a4=a & a5=g & a6=t & a7=c & a8=t & a9=g & pos=31)|
+(a0=g & a1=a & a2=t & a3=a & a4=g & a5=t & a6=c & a7=t & a8=g & a9=t & pos=32)|
+(a0=a & a1=t & a2=a & a3=g & a4=t & a5=c & a6=t & a7=g & a8=t & a9=a & pos=33)|
+(a0=t & a1=a & a2=g & a3=t & a4=c & a5=t & a6=g & a7=t & a8=a & a9=g & pos=34)|
+(a0=a & a1=g & a2=t & a3=c & a4=t & a5=g & a6=t & a7=a & a8=g & a9=c & pos=35)|
+(a0=g & a1=t & a2=c & a3=t & a4=g & a5=t & a6=a & a7=g & a8=c & a9=g & pos=36)|
+(a0=t & a1=c & a2=t & a3=g & a4=t & a5=a & a6=g & a7=c & a8=g & a9=t & pos=37)|
+(a0=c & a1=t & a2=g & a3=t & a4=a & a5=g & a6=c & a7=g & a8=t & a9=c & pos=38)|
+(a0=t & a1=g & a2=t & a3=a & a4=g & a5=c & a6=g & a7=t & a8=c & a9=a & pos=39)|
+(a0=g & a1=t & a2=a & a3=g & a4=c & a5=g & a6=t & a7=c & a8=a & a9=c & pos=40)|
+(a0=t & a1=a & a2=g & a3=c & a4=g & a5=t & a6=c & a7=a & a8=c & a9=g & pos=41)|
+(a0=a & a1=g & a2=c & a3=g & a4=t & a5=c & a6=a & a7=c & a8=g & a9=t & pos=42)|
+(a0=g & a1=c & a2=g & a3=t & a4=c & a5=a & a6=c & a7=g & a8=t & a9=g & pos=43)|
+(a0=c & a1=g & a2=t & a3=c & a4=a & a5=c & a6=g & a7=t & a8=g & a9=t & pos=44)|
+(a0=g & a1=t & a2=c & a3=a & a4=c & a5=g & a6=t & a7=g & a8=t & a9=t & pos=45)|
+(a0=t & a1=c & a2=a & a3=c & a4=g & a5=t & a6=g & a7=t & a8=t & a9=g & pos=46)|
+(a0=c & a1=a & a2=c & a3=g & a4=t & a5=g & a6=t & a7=t & a8=g & a9=t & pos=47)|
+(a0=a & a1=c & a2=g & a3=t & a4=g & a5=t & a6=t & a7=g & a8=t & a9=g & pos=48)|
+(a0=c & a1=g & a2=t & a3=g & a4=t & a5=t & a6=g & a7=t & a8=g & a9=c & pos=49)|
+(a0=g & a1=t & a2=g & a3=t & a4=t & a5=g & a6=t & a7=g & a8=c & a9=c & pos=50)|
+(a0=t & a1=g & a2=t & a3=t & a4=g & a5=t & a6=g & a7=c & a8=c & a9=t & pos=51)|
+(a0=g & a1=t & a2=t & a3=g & a4=t & a5=g & a6=c & a7=c & a8=t & a9=t & pos=52)|
+(a0=t & a1=t & a2=g & a3=t & a4=g & a5=c & a6=c & a7=t & a8=t & a9=t & pos=53)|
+(a0=t & a1=g & a2=t & a3=g & a4=c & a5=c & a6=t & a7=t & a8=t & a9=a & pos=54)|
+(a0=g & a1=t & a2=g & a3=c & a4=c & a5=t & a6=t & a7=t & a8=a & a9=a & pos=55)|
+(a0=t & a1=g & a2=c & a3=c & a4=t & a5=t & a6=t & a7=a & a8=a & a9=a & pos=56)|
+(a0=g & a1=c & a2=c & a3=t & a4=t & a5=t & a6=a & a7=a & a8=a & a9=a & pos=57)|
+(a0=c & a1=c & a2=t & a3=t & a4=t & a5=a & a6=a & a7=a & a8=a & a9=g & pos=58)|
+(a0=c & a1=t & a2=t & a3=t & a4=a & a5=a & a6=a & a7=a & a8=g & a9=c & pos=59)|
+(a0=t & a1=t & a2=t & a3=a & a4=a & a5=a & a6=a & a7=g & a8=c & a9=t & pos=60)|
+(a0=t & a1=t & a2=a & a3=a & a4=a & a5=a & a6=g & a7=c & a8=t & a9=g & pos=61)|
+(a0=t & a1=a & a2=a & a3=a & a4=a & a5=g & a6=c & a7=t & a8=g & a9=g & pos=62)|
+(a0=a & a1=a & a2=a & a3=a & a4=g & a5=c & a6=t & a7=g & a8=g & a9=a & pos=63)|
+(a0=a & a1=a & a2=a & a3=g & a4=c & a5=t & a6=g & a7=g & a8=a & a9=t & pos=64)|
+(a0=a & a1=a & a2=g & a3=c & a4=t & a5=g & a6=g & a7=a & a8=t & a9=a & pos=65)|
+(a0=a & a1=g & a2=c & a3=t & a4=g & a5=g & a6=a & a7=t & a8=a & a9=t & pos=66)|
+(a0=g & a1=c & a2=t & a3=g & a4=g & a5=a & a6=t & a7=a & a8=t & a9=c & pos=67)|
+(a0=c & a1=t & a2=g & a3=g & a4=a & a5=t & a6=a & a7=t & a8=c & a9=c & pos=68)|
+(a0=t & a1=g & a2=g & a3=a & a4=t & a5=a & a6=t & a7=c & a8=c & a9=t & pos=69)|
+(a0=g & a1=g & a2=a & a3=t & a4=a & a5=t & a6=c & a7=c & a8=t & a9=a & pos=70)|
+(a0=g & a1=a & a2=t & a3=a & a4=t & a5=c & a6=c & a7=t & a8=a & a9=c & pos=71)|
+(a0=a & a1=t & a2=a & a3=t & a4=c & a5=c & a6=t & a7=a & a8=c & a9=g & pos=72)|
+(a0=t & a1=a & a2=t & a3=c & a4=c & a5=t & a6=a & a7=c & a8=g & a9=g & pos=73)|
+(a0=a & a1=t & a2=c & a3=c & a4=t & a5=a & a6=c & a7=g & a8=g & a9=t & pos=74)|
+(a0=t & a1=c & a2=c & a3=t & a4=a & a5=c & a6=g & a7=g & a8=t & a9=a & pos=75)|
+(a0=c & a1=c & a2=t & a3=a & a4=c & a5=g & a6=g & a7=t & a8=a & a9=g & pos=76)|
+(a0=c & a1=t & a2=a & a3=c & a4=g & a5=g & a6=t & a7=a & a8=g & a9=g & pos=77)|
+(a0=t & a1=a & a2=c & a3=g & a4=g & a5=t & a6=a & a7=g & a8=g & a9=c & pos=78)|
+(a0=a & a1=c & a2=g & a3=g & a4=t & a5=a & a6=g & a7=g & a8=c & a9=c & pos=79)|
+(a0=c & a1=g & a2=g & a3=t & a4=a & a5=g & a6=g & a7=c & a8=c & a9=t & pos=80)|
+(a0=g & a1=g & a2=t & a3=a & a4=g & a5=g & a6=c & a7=c & a8=t & a9=a & pos=81)|
+(a0=g & a1=t & a2=a & a3=g & a4=g & a5=c & a6=c & a7=t & a8=a & a9=c & pos=82)|
+(a0=t & a1=a & a2=g & a3=g & a4=c & a5=c & a6=t & a7=a & a8=c & a9=c & pos=83)|
+(a0=a & a1=g & a2=g & a3=c & a4=c & a5=t & a6=a & a7=c & a8=c & a9=c & pos=84)|
+(a0=g & a1=g & a2=c & a3=c & a4=t & a5=a & a6=c & a7=c & a8=c & a9=t & pos=85)|
+(a0=g & a1=c & a2=c & a3=t & a4=a & a5=c & a6=c & a7=c & a8=t & a9=g & pos=86)|
+(a0=c & a1=c & a2=t & a3=a & a4=c & a5=c & a6=c & a7=t & a8=g & a9=t & pos=87)|
+(a0=c & a1=t & a2=a & a3=c & a4=c & a5=c & a6=t & a7=g & a8=t & a9=t & pos=88)|
+(a0=t & a1=a & a2=c & a3=c & a4=c & a5=t & a6=g & a7=t & a8=t & a9=g & pos=89)|
+(a0=a & a1=c & a2=c & a3=c & a4=t & a5=g & a6=t & a7=t & a8=g & a9=c & pos=90)|
+(a0=c & a1=c & a2=c & a3=t & a4=g & a5=t & a6=t & a7=g & a8=c & a9=g & pos=91)|
+(a0=c & a1=c & a2=t & a3=g & a4=t & a5=t & a6=g & a7=c & a8=g & a9=c & pos=92)|
+(a0=c & a1=t & a2=g & a3=t & a4=t & a5=g & a6=c & a7=g & a8=c & a9=c & pos=93)|
+(a0=t & a1=g & a2=t & a3=t & a4=g & a5=c & a6=g & a7=c & a8=c & a9=c & pos=94)|
+(a0=g & a1=t & a2=t & a3=g & a4=c & a5=g & a6=c & a7=c & a8=c & a9=t & pos=95)|
+(a0=t & a1=t & a2=g & a3=c & a4=g & a5=c & a6=c & a7=c & a8=t & a9=a & pos=96)|
+(a0=t & a1=g & a2=c & a3=g & a4=c & a5=c & a6=c & a7=t & a8=a & a9=t & pos=97)|
+(a0=g & a1=c & a2=g & a3=c & a4=c & a5=c & a6=t & a7=a & a8=t & a9=g & pos=98)|
+(a0=g & a1=c & a2=g & a3=c & a4=c & a5=c & a6=t & a7=a & a8=t & a9=g & pos=99) 
+ )

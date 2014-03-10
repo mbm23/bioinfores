@@ -1,0 +1,25 @@
+MODULE main
+VAR
+a0: {a, c, t, g};
+a1: {a, c, t, g};
+a2: {a, c, t, g};
+a3: {a, c, t, g};
+a4: {a, c, t, g};
+a5: {a, c, t, g};
+a6: {a, c, t, g};
+a7: {a, c, t, g};
+a8: {a, c, t, g};
+a9: {a, c, t, g};
+VAR pos: 0..20;
+INIT (
+(a0=c & a1=g & a2=a & a3=t & a4=c & a5=a & a6=g & a7=a & a8=a & a9=c & pos=0)|
+(a0=g & a1=a & a2=t & a3=c & a4=a & a5=g & a6=a & a7=a & a8=c & a9=a & pos=1)|
+(a0=a & a1=t & a2=c & a3=a & a4=g & a5=a & a6=a & a7=c & a8=a & a9=c & pos=2)|
+(a0=t & a1=c & a2=a & a3=g & a4=a & a5=a & a6=c & a7=a & a8=c & a9=g & pos=3)|
+(a0=c & a1=a & a2=g & a3=a & a4=a & a5=c & a6=a & a7=c & a8=g & a9=t & pos=4)|
+(a0=a & a1=g & a2=a & a3=a & a4=c & a5=a & a6=c & a7=g & a8=t & a9=t & pos=5)|
+(a0=g & a1=a & a2=a & a3=c & a4=a & a5=c & a6=g & a7=t & a8=t & a9=c & pos=6)|
+(a0=a & a1=a & a2=c & a3=a & a4=c & a5=g & a6=t & a7=t & a8=c & a9=c & pos=7)|
+(a0=a & a1=c & a2=a & a3=c & a4=g & a5=t & a6=t & a7=c & a8=c & a9=c & pos=8)|
+(a0=a & a1=c & a2=a & a3=c & a4=g & a5=t & a6=t & a7=c & a8=c & a9=c & pos=9) 
+ )

@@ -1,0 +1,16 @@
+MODULE main
+VAR
+a0: {a, c, t, g};
+a1: {a, c, t, g};
+a2: {a, c, t, g};
+a3: {a, c, t, g};
+a4: {a, c, t, g};
+a5: {a, c, t, g};
+a6: {a, c, t, g};
+a7: {a, c, t, g};
+a8: {a, c, t, g};
+a9: {a, c, t, g};
+VAR pos: 0..10;
+INIT (
+(a0=a & a1=g & a2=g & a3=g & a4=c & a5=c & a6=t & a7=c & a8=a & a9=a & pos=1) 
+ )

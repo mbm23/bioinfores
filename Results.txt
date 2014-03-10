@@ -1,0 +1,11 @@
+Length of DNA word - 10 chars
+Length of DNA string - varies
+
+Results
+Length : # of nodes
+1 : 25
+10 : 177
+100 : 1534
+1000 : 12,198
+5000 : 49,276
+10000 : nuSMV crash
